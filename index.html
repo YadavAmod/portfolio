@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amod Yadav's Portfolio</title>
+    <style>
+      :root {
+        --primary-color: #4fc3f7;
+        --secondary-color: #03a9f4;
+        --bg-dark: #121212;
+        --bg-light: #1e1e1e;
+        --text-color: #e0e0e0;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background-color: var(--bg-white);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Navigation */
+      nav {
+        background-color: var(--bg-light);
+        padding: 1rem 5%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+      nav ul {
+        list-style-type: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        font-size: 1.1rem;
+      }
+
+      nav a:hover {
+        color: var(--primary-color);
+      }
+
+      /* Sections */
+      section {
+        padding: 5rem 5%;
+        background-color: var(--bg-light);
+        margin-bottom: 2rem;
+      }
+
+      .section-content {
+        max-width: 100px;
+        margin: 0 auto;
+      }
+
+      h1,
+      h2 {
+        margin-bottom: 1.5rem;
+        color: var(--primary-color);
+      }
+
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 0.5rem;
+        margin-bottom: 2rem;
+      }
+
+      /* Profile picture */
+      .profile-picture {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        margin: 0 auto 3rem;
+        display: block;
+        background-color: var(--primary-color);
+        background-image: url("dp1.jpg");
+        background-size: cover;
+        background-position: center;
+        border: 5px solid var(--primary-color);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+      /*home  section for scrolling word for AMOD YADAV */
+      #intro {
+        font-size: 1.2em;
+        line-height: 1.6;
+        max-width: 600px;
+        text-align: center;
+      }
+      #animated-name {
+        display: inline-block;
+        min-width: 150px;
+        min-height: 30px;
+        vertical-align: bottom;
+      }
+      .letter {
+        display: inline-block;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s, transform 0.5s;
+      }
+
+      /*about section */
+      .section-content {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .about-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .profile-image {
+        width: 350px;
+        height: 690px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      .about-text {
+        flex: 2;
+      }
+
+      .resume-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 3px 110px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .resume-button:hover {
+        background-color: #0056b3;
+      }
+
+      /* Skills section */
+      #skills ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        list-style-type: none;
+      }
+
+      #skills li {
+        background-color: var(--bg-dark);
+        color: var(--primary-color);
+        padding: 0.7rem 1.5rem;
+        border-radius: 30px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        border: 2px solid var(--primary-color);
+      }
+
+      #skills li:hover {
+        background-color: var(--primary-color);
+        color: var(--bg-dark);
+      }
+
+      /* education sections */
+      #education {
+        padding: 2rem 0;
+        background-color: #1e1e1e;
+      }
+      .section-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #bb86fc;
+      }
+      .education-boxes {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .education-box {
+        flex: 1;
+        min-width: 250px;
+        background-color: #2c2c2c;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+      }
+      .education-box:hover {
+        transform: translateY(-5px);
+        background-color: #03dac6;
+        color: #000000;
+      }
+      .education-box h3 {
+        margin-top: 0;
+        color: #cf6679;
+      }
+      .education-box:hover h3 {
+        color: #1e1e1e;
+      }
+      .education-box p {
+        margin-bottom: 0.5rem;
+      }
+      .education-box strong {
+        color: #bb86fc;
+      }
+      .education-box:hover strong {
+        color: #1e1e1e;
+      }
+
+      /* Projects sections */
+      #projects {
+        padding: 2rem 0;
+        background-color: #1e1e1e;
+      }
+      .section-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #bb86fc;
+      }
+      .project-categories {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+      }
+      .project-category {
+        flex: 1;
+        min-width: 300px;
+        background-color: #2c2c2c;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+      }
+      .project-category:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      }
+      .project-category h3 {
+        color: #03dac6;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #03dac6;
+        padding-bottom: 0.5rem;
+      }
+      .project-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .project-item {
+        background-color: #3c3c3c;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+      }
+      .project-item:hover {
+        background-color: #4c4c4c;
+      }
+      .project-item h4 {
+        color: #cf6679;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+      }
+      .project-item p {
+        margin: 0 0 0.5rem 0;
+        font-size: 0.9rem;
+      }
+      .project-link {
+        display: inline-block;
+        color: #03dac6;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      .project-link:hover {
+        color: #bb86fc;
+      }
+
+      /*certificates section*/
+      #certificates {
+        padding: 2rem 0;
+        background-color: #1e1e1e;
+      }
+      .section-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #bb86fc;
+      }
+      .certificate-categories {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+      .certificate-category {
+        background-color: #2c2c2c;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      }
+      .category-title {
+        color: #03dac6;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #03dac6;
+        padding-bottom: 0.5rem;
+      }
+      .certificate-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+      }
+      .certificate-box {
+        background-color: #3c3c3c;
+        border-radius: 8px;
+        padding: 1.5rem;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+      .certificate-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+      }
+      .certificate-logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1rem;
+        align-self: center;
+      }
+      .certificate-name {
+        color: #cf6679;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+      }
+      .certificate-issuer {
+        color: #bb86fc;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+      }
+      .certificate-link {
+        display: inline-block;
+        background-color: #3700b3;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        text-align: center;
+        margin-top: auto;
+      }
+      .certificate-link:hover {
+        background-color: #bb86fc;
+        color: #000000;
+      }
+
+      /* Contact details */
+      .contact-details {
+        margin-bottom: 3rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+      }
+
+      .contact-details p {
+        margin-bottom: 0.5rem;
+      }
+
+      .contact-details a {
+        color: var(--primary-color);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .contact-details a:hover {
+        color: var(--secondary-color);
+      }
+
+      /* Contact form */
+      #contact {
+        padding: 2rem 0;
+        background-color: #1e1e1e;
+      }
+      .section-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #bb86fc;
+      }
+      .contact-details {
+        background-color: #2c2c2c;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .contact-details p {
+        margin-bottom: 0.5rem;
+      }
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .social-link {
+        display: flex;
+        align-items: center;
+        color: #03dac6;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      .social-link:hover {
+        color: #bb86fc;
+      }
+      .social-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 0.5rem;
+      }
+      #contact-form {
+        display: grid;
+        gap: 1rem;
+      }
+      #contact-form input,
+      #contact-form textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 4px;
+        background-color: #3c3c3c;
+        color: #e0e0e0;
+      }
+      #contact-form button {
+        background-color: #03dac6;
+        color: #000000;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      #contact-form button:hover {
+        background-color: #bb86fc;
+      }
+      /* Footer */
+      footer {
+        background-color: var(--bg-light);
+        color: var(--text-color);
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: auto;
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          align-items: center;
+          padding: 1rem;
+        }
+
+        .nav-brand {
+          margin-bottom: 1rem;
+        }
+
+        nav ul {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        nav li {
+          margin: 0.5rem 0;
+        }
+
+        section {
+          padding: 3rem 1rem;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!--navbar start from here-->
+    <nav>
+      <a href="#home" class="nav-brand">Portfolio</a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!--Home section start from here-->
+    <section id="home">
+      <div class="section-content">
+        <div class="profile-picture"></div>
+        <h1>Welcome To My Portfolio</h1>
+        <p id="intro">
+          Hi, I'm <span id="animated-name"></span>a dedicated Cyber Security
+          Enthusiast.
+        </p>
+      </div>
+    </section>
+
+    <!-- About section start from here-->
+    <section id="about">
+      <div class="section-content">
+        <h2>About Me</h2>
+        <div class="about-content">
+          <img src="cv.jpg" alt="Profile Picture" class="profile-image" />
+          <div class="about-text">
+            <p>
+              I'm a dedicated cybersecurity enthusiast currently pursuing my
+              Bachelor of Technology (B.Tech) in Computer Science and
+              Engineering. My academic journey is driven by a passion for
+              safeguarding digital assets and securing information systems in an
+              increasingly interconnected world. I am particularly focused on
+              understanding the latest cybersecurity threats, developing
+              effective countermeasures, and designing robust systems to prevent
+              potential vulnerabilities.
+            </p>
+
+            <p>
+              In addition to my passion for cybersecurity, I am also expanding
+              my expertise in full stack development, working with technologies
+              like HTML, CSS, JavaScript, MySQL, and MongoDB to create dynamic,
+              responsive web applications.
+            </p>
+            <br />
+            <p>
+              I'm also honing my skills in Java and Python programming, tackling
+              complex software challenges and developing versatile, scalable
+              solutions. Furthermore, I am delving deep into Data Structures and
+              Algorithms (DSA) to strengthen my problem-solving abilities and
+              ensure optimized performance in the software I design.
+            </p>
+            <br />
+            <p>
+              My goal is to integrate all these skills, from coding to security,
+              to become a well-rounded technologist capable of building and
+              protecting the digital systems of the future.
+            </p>
+          </div>
+        </div>
+        <a href="resume.pdf" download class="resume-button">Download Resume</a>
+      </div>
+    </section>
+
+    <!--Skills section start from here-->
+    <section id="skills">
+      <div class="section-content">
+        <h2>Skills</h2>
+        <ul>
+          <li>Network Security</li>
+          <li>Python & Java Programming</li>
+          <li>HTML,CSS,JS,React js,Node js,Expres js</li>
+          <li>MongoDB and MySql Databases</li>
+          <li>Operating System</li>
+          <li>Linux</li>
+          <li>Microsoft Word,Excel and Power Point</li>
+          <li>Generative AI such as Chatgpt,Copilot adn claude</li>
+          <li>Ethical Hacking</li>
+          <li>Penetration Testing</li>
+          <li>Cryptography</li>
+          <li>Incident Response</li>
+          <li>Security Information and Event Management (SIEM)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!--Education section start from here-->
+    <section id="education">
+      <div class="section-content">
+        <h2>Education</h2>
+        <div class="education-boxes">
+          <div class="education-box">
+            <h3>Secondary Level</h3>
+            <p>
+              <strong>School:</strong> Shree Saraswati Secondary
+              School,Inaruwa,Sunsari,Nepal
+            </p>
+            <p><strong>Year:</strong> 2012 - 2016</p>
+            <p><strong>Percentage Of 10th:</strong>87%</p>
+            <p>
+              <strong>Achievements:</strong> Honor Roll, Science Fair Winner,So
+              many quizes and debate winner
+            </p>
+          </div>
+          <div class="education-box">
+            <h3>11th &amp; 12th Grade</h3>
+            <p>
+              <strong>School:</strong> Kantipur Secondary
+              School,Biratnagar,Morang,Nepal
+            </p>
+            <p><strong>Year:</strong> 2017 - 2019</p>
+            <p><strong>Stream:</strong> Science with Computer Science</p>
+            <p><strong>Percentage:</strong> 85%</p>
+          </div>
+          <div class="education-box">
+            <h3>Bachelor's Degree</h3>
+            <p>
+              <strong>University:</strong>Visvesvaraya Technological University
+              (VTU)
+            </p>
+            <p>
+              <strong>College:</strong>Bangalore Technological Institute (BTI)
+            </p>
+            <p>
+              <strong>Degree:</strong> B.Tech in Computer Science & Engineering.
+            </p>
+            <p><strong>Year:</strong> 2021 - 2025</p>
+            <p><strong>CGPA:</strong> 9.6/10.0</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Projects section start from here-->
+    <section id="projects">
+      <div class="section-content">
+        <h2>Projects</h2>
+        <div class="project-categories">
+          <div class="project-category">
+            <h3>Mini Projects</h3>
+            <ul class="project-list">
+              <li class="project-item">
+                <h4>Hotel Management System</h4>
+                <p>
+                  Developed a Hotel Management System using Java for frontend as
+                  well as backend and MySQL for database .
+                </p>
+                <a
+                  href="https://github.com/YadavAmod/HotelManagementSystem"
+                  class="project-link"
+                  >Learn More</a
+                >
+              </li>
+              <li class="project-item">
+                <h4>College Management System</h4>
+                <p>
+                  Developed a College Management System using MERN Technology.
+                </p>
+                <a
+                  href="https://github.com/YadavAmod?tab=repositories"
+                  class="project-link"
+                  >Learn More</a
+                >
+              </li>
+              <li class="project-item">
+                <h4>Secure File Sharing System</h4>
+                <p>
+                  Developed a system using encryption techniques for secure file
+                  sharing.
+                </p>
+                <a href="#secure-file-sharing" class="project-link"
+                  >Learn More</a
+                >
+              </li>
+              <li class="project-item">
+                <h4>Local Network Vulnerability Assessment</h4>
+                <p>
+                  Conducted a comprehensive vulnerability assessment on a local
+                  network.
+                </p>
+                <a href="#vulnerability-assessment" class="project-link"
+                  >View Details</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-category">
+            <h3>Major/Advanced Projects</h3>
+            <ul class="project-list">
+              <li class="project-item">
+                <h4>Phishing Awareness Training Program</h4>
+                <p>
+                  Created an educational program to raise awareness about
+                  phishing attacks for small businesses.
+                </p>
+                <a href="#phishing-awareness" class="project-link"
+                  >Explore Project</a
+                >
+              </li>
+              <li class="project-item">
+                <h4>Intrusion Detection System</h4>
+                <p>
+                  Implemented a basic IDS using machine learning algorithms to
+                  detect network anomalies.
+                </p>
+                <a href="#intrusion-detection" class="project-link"
+                  >See Results</a
+                >
+              </li>
+              <li class="project-item">
+                <h4>Blockchain-based Identity Management</h4>
+                <p>
+                  Developed a decentralized identity management system using
+                  blockchain technology.
+                </p>
+                <a href="#blockchain-identity" class="project-link"
+                  >View Project</a
+                >
+              </li>
+              <li class="project-item">
+                <h4>AI-powered Threat Intelligence Platform</h4>
+                <p>
+                  Created a platform that uses AI to analyze and predict
+                  potential security threats in real-time.
+                </p>
+                <a href="#ai-threat-intelligence" class="project-link"
+                  >Discover More</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Certificates section start from here-->
+    <section id="certificates">
+      <div class="section-content">
+        <h2>Certificates</h2>
+        <div class="certificate-categories">
+          <div class="certificate-category">
+            <h3 class="category-title">Online Certificates</h3>
+            <div class="certificate-grid">
+              <div class="certificate-box">
+                <img
+                  src="onlinecerti.jpg"
+                  alt="Logo"
+                  class="certificate-logo"
+                />
+                <h4 class="certificate-name">Online Achieved Certificates</h4>
+                <p class="certificate-issuer">Issued by Great Learning</p>
+                <a
+                  href="https://olympus.mygreatlearning.com/certificates"
+                  class="certificate-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Certificate</a>
+
+                  <div class="certificate-box">
+                <img
+                  src="dataflair.jpg"
+                  alt="Logo"
+                  class="certificate-logo"
+                />
+                <h4 class="certificate-name">Online Achieved Certificates</h4>
+                <p class="certificate-issuer">Issued by Data-Flair</p>
+                <a
+                  href="https://data-flair.training/df-certificates/"
+                  class="certificate-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Certificate</a>
+
+              <div class="certificate-box">
+                <img
+                  src="/api/placeholder/60/60"
+                  alt="CompTIA Logo"
+                  class="certificate-logo"
+                />
+                <h4 class="certificate-name">CompTIA Security+</h4>
+                <p class="certificate-issuer">Issued by CompTIA</p>
+                <a
+                  href="https://www.comptia.org/certifications/security"
+                  class="certificate-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Certificate</a
+                >
+              </div>
+              <div class="certificate-box">
+                <img
+                  src="/api/placeholder/60/60"
+                  alt="EC-Council Logo"
+                  class="certificate-logo"
+                />
+                <h4 class="certificate-name">Certified Ethical Hacker (CEH)</h4>
+                <p class="certificate-issuer">Issued by EC-Council</p>
+                <a
+                  href="https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/"
+                  class="certificate-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Certificate</a
+                >
+              </div>
+              <div class="certificate-box">
+                <img
+                  src="/api/placeholder/60/60"
+                  alt="Cisco Logo"
+                  class="certificate-logo"
+                />
+                <h4 class="certificate-name">
+                  CISCO Certified Network Associate (CCNA)
+                </h4>
+                <p class="certificate-issuer">Issued by Cisco</p>
+                <a
+                  href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html"
+                  class="certificate-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >View Certificate</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="certificate-category">
+            <h3 class="category-title">Internship Certificates</h3>
+            <div class="certificate-grid">
+              <div class="certificate-box">
+                <img
+                  src="/api/placeholder/60/60"
+                  alt="TechSecure Solutions Logo"
+                  class="certificate-logo"
+                />
+                <h4 class="certificate-name">Cybersecurity Intern</h4>
+                <p class="certificate-issuer">Issued by TechSecure Solutions</p>
+                <a href="#techsecure-internship" class="certificate-link"
+                  >View Certificate</a
+                >
+              </div>
+              <div class="certificate-box">
+                <img
+                  src="ic.png"
+                  alt="NetGuard Systems Logo"
+                  class="certificate-logo"
+                />
+                <h4 class="certificate-name">Full Stack Developer Intern</h4>
+                <p class="certificate-issuer">Issued by TEKKYBENCH</p>
+                <a href="https://tekkybench.com/" class="certificate-link"
+                  >View Certificate</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="certificate-category">
+            <h3 class="category-title">Other Certificates</h3>
+            <div class="certificate-grid">
+              <div class="certificate-box">
+                <img
+                  src="/api/placeholder/60/60"
+                  alt="CodeMasters Academy Logo"
+                  class="certificate-logo"
+                />
+                <h4 class="certificate-name">Advanced Python Programming</h4>
+                <p class="certificate-issuer">Issued by CodeMasters Academy</p>
+                <a href="#python-certificate" class="certificate-link"
+                  >View Certificate</a
+                >
+              </div>
+              <div class="certificate-box">
+                <img
+                  src="/api/placeholder/60/60"
+                  alt="CloudSafe Institute Logo"
+                  class="certificate-logo"
+                />
+                <h4 class="certificate-name">Cloud Security Fundamentals</h4>
+                <p class="certificate-issuer">Issued by CloudSafe Institute</p>
+                <a href="#cloud-security-certificate" class="certificate-link"
+                  >View Certificate</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Contact section start from here-->
+    <section id="contact">
+      <div class="section-content">
+        <h2>Contact Me</h2>
+        <div class="contact-details">
+          <p>Name: Amod Yadav</p>
+          <p>Phone: +917070953996</p>
+          <p>Email: amodyadav091998@gmail.com</p>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/amodyadav010/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              <svg
+                class="social-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/YadavAmod"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              <svg
+                class="social-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              <svg
+                class="social-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+
+              Instagram
+            </a>
+          </div>
+        </div>
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="tel" name="phone" placeholder="Phone Number" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!--Footer start from here-->
+    <footer>
+      <p>&copy; 2024 Amod Yadav. All rights reserved.</p>
+    </footer>
+
+    <!--JavaScript start from here-->
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Handle form submission
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Here you would typically send the form data to a server
+          alert("Thank you for your message. I will get back to you soon!");
+          this.reset();
+        });
+
+      //FOR HOME SECTION decoration
+      const name = "AMOD YADAV";
+      const colors = [
+        "#FF6B6B",
+        "#4ECDC4",
+        "#45B7D1",
+        "#FFA07A",
+        "#98D8C8",
+        "#F67280",
+        "#C06C84",
+        "#6C5B7B",
+        "#355C7D",
+        "#626262",
+      ];
+      const animatedName = document.getElementById("animated-name");
+      let delay = 0;
+
+      name.split("").forEach((letter, index) => {
+        const span = document.createElement("span");
+        span.textContent = letter;
+        span.className = "letter";
+        span.style.color = colors[index % colors.length];
+        animatedName.appendChild(span);
+
+        setTimeout(() => {
+          span.style.opacity = "1";
+          span.style.transform = "translateY(0)";
+        }, delay);
+
+        delay += 100; // Adjust this value to change the speed of appearance
+      });
+
+      function animateName() {
+        const letters = document.querySelectorAll(".letter");
+        letters.forEach((letter, index) => {
+          setTimeout(() => {
+            letter.style.transform = "translateY(-10px)";
+            setTimeout(() => {
+              letter.style.transform = "translateY(0)";
+            }, 250);
+          }, index * 100);
+        });
+      }
+
+      // Start the continuous animation after all letters have appeared
+      setTimeout(() => {
+        setInterval(animateName, 1000); // Repeat every 3 seconds
+      }, delay + 1000);
+    </script>
+  </body>
+</html>
