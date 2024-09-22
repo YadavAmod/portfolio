@@ -622,17 +622,10 @@ nav {
   margin: 0 1rem;
 }
 
-.hamburger {
+.menu-toggle {
   display: none;
-  flex-direction: column;
   cursor: pointer;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: #333;
-  margin: 2px 0;
+  font-size: 1.5rem;
 }
 
 section {
@@ -694,22 +687,22 @@ h2 {
   }
 
   nav {
-    flex-wrap: wrap;
-    padding: 1rem;
+    position: relative;
   }
 
-  .nav-brand {
-    flex: 1;
-  }
-
-  .hamburger {
-    display: flex;
+  .menu-toggle {
+    display: block;
   }
 
   .nav-menu {
-    flex-direction: column;
-    width: 100%;
     display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-direction: column;
+    width: 200px;
   }
 
   .nav-menu.active {
@@ -717,8 +710,9 @@ h2 {
   }
 
   .nav-menu li {
-    margin: 0.5rem 0;
+    margin: 0;
     text-align: center;
+    padding: 0.5rem 0;
   }
 
   section {
