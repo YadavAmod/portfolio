@@ -171,31 +171,118 @@
         background-color: #0056b3;
       }
 
-      /* Skills section */
-      #skills ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        list-style-type: none;
-      }
+     /*skill sections */
+    /* Dark mode styles for Skills section with colorful boxes */
+#skills {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 4rem 0;
+}
 
-      #skills li {
-        background-color: var(--bg-dark);
-        color: var(--primary-color);
-        padding: 0.7rem 1.5rem;
-        border-radius: 30px;
-        font-weight: bold;
-        transition: all 0.3s ease;
-        border: 2px solid var(--primary-color);
-      }
+#skills .section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-      #skills li:hover {
-        background-color: var(--primary-color);
-        color: var(--bg-dark);
-      }
+#skills h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
-      /* education sections */
+#skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#skills li {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual color styles for each skill */
+#skills li:nth-child(1) { background-color: #FF6B6B; }
+#skills li:nth-child(2) { background-color: #4ECDC4; }
+#skills li:nth-child(3) { background-color: #45B7D1; }
+#skills li:nth-child(4) { background-color: #F7B731; }
+#skills li:nth-child(5) { background-color: #6C5CE7; }
+#skills li:nth-child(6) { background-color: #FFA502; }
+#skills li:nth-child(7) { background-color: #26DE81; }
+#skills li:nth-child(8) { background-color: #D980FA; }
+#skills li:nth-child(9) { background-color: #FF4757; }
+#skills li:nth-child(10) { background-color: #5352ED; }
+#skills li:nth-child(11) { background-color: #2ED573; }
+#skills li:nth-child(12) { background-color: #FF6B6B; }
+#skills li:nth-child(13) { background-color: #1E90FF; }
+
+/* Hover effects for each skill */
+#skills li:nth-child(1):hover { background-color: #FF8E8E; }
+#skills li:nth-child(2):hover { background-color: #6EE7DE; }
+#skills li:nth-child(3):hover { background-color: #69CEE6; }
+#skills li:nth-child(4):hover { background-color: #F9C85D; }
+#skills li:nth-child(5):hover { background-color: #8F7FF5; }
+#skills li:nth-child(6):hover { background-color: #FFB732; }
+#skills li:nth-child(7):hover { background-color: #4EF5A5; }
+#skills li:nth-child(8):hover { background-color: #E5A4FF; }
+#skills li:nth-child(9):hover { background-color: #FF6B7D; }
+#skills li:nth-child(10):hover { background-color: #7674FF; }
+#skills li:nth-child(11):hover { background-color: #56F798; }
+#skills li:nth-child(12):hover { background-color: #FF8E8E; }
+#skills li:nth-child(13):hover { background-color: #4DA6FF; }
+
+#skills li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#skills li:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  #skills h2 {
+    font-size: 2rem;
+  }
+
+  #skills li {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #skills {
+    padding: 3rem 0;
+  }
+
+  #skills h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  #skills li {
+    font-size: 0.85rem;
+    padding: 0.7rem 1rem;
+  }
+}
+
+
+    /* education sections */
       #education {
         padding: 2rem 0;
         background-color: #1e1e1e;
@@ -505,41 +592,146 @@
         padding: 1.5rem;
         margin-top: auto;
       }
+/*responsive design.*/
+/* Base styles */
+body {
+  font-size: 16px;
+}
 
-      /* Responsive design */
-      @media (max-width: 768px) {
-        nav {
-          flex-direction: column;
-          align-items: center;
-          padding: 1rem;
-        }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
 
-        .nav-brand {
-          margin-bottom: 1rem;
-        }
+.nav-brand {
+  font-size: 1.5rem;
+}
 
-        nav ul {
-          flex-direction: column;
-          align-items: center;
-        }
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
 
-        nav li {
-          margin: 0.5rem 0;
-        }
+nav li {
+  margin: 0 1rem;
+}
 
-        section {
-          padding: 3rem 1rem;
-        }
+section {
+  padding: 4rem 2rem;
+}
 
-        h1 {
-          font-size: 2.5rem;
-        }
+h1 {
+  font-size: 3rem;
+}
 
-        h2 {
-          font-size: 2rem;
-        }
-      }
-    </style>
+h2 {
+  font-size: 2.5rem;
+}
+
+/* Responsive design */
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+  body {
+    font-size: 13px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .nav-brand {
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 0.5rem 0;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  body {
+    font-size: 12px;
+  }
+
+  nav {
+    padding: 0.75rem;
+  }
+
+  section {
+    padding: 1.5rem 0.75rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+</style>
+     
   </head>
   <body>
     <!--navbar start from here-->
