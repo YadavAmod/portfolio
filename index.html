@@ -1,459 +1,527 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amod Yadav | Cybersecurity Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amod Yadav | Cyber Security Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 </head>
 
-<body>
-  <div id="preloader">
-    <div class="loader-text">INITIALIZING SECURE CONNECTION...</div>
-    <div class="spinner"></div>
-  </div>
-
-  <button id="theme-toggle" aria-label="Toggle dark/light theme">
-    <i class="fas fa-moon"></i>
-    <i class="fas fa-sun"></i>
-  </button>
-
-  <nav>
-    <div class="nav-brand">PORTFOLIO<span class="blink">_</span></div>
-    <ul>
-      <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="#about"><i class="fas fa-user-shield"></i> About</a></li>
-      <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-      <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-      <li><a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a></li>
-      <li><a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a></li>
-      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+<!-- Navigation -->
+<header class="nav-header">
+  <div class="container">
+    <div class="logo">AY PORTFOLIO</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="menu-toggle">
+    <div class="mobile-menu">
       <i class="fas fa-bars"></i>
     </div>
-  </nav>
+  </div>
+</header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="cyber-grid"></div>
-    <div class="hero-content">
-      <div class="profile-picture"></div>
-      <h1 id="animated-name">AMOD YADAV</h1>
-      <div class="typewriter">
-        <span id="typewriter-text"></span><span class="cursor">|</span>
-      </div>
-      <p class="tagline">Securing the digital frontier one vulnerability at a time</p>
-      <div class="hero-buttons">
-        <a href="resume.pdf" class="btn primary-btn" download><i class="fas fa-download"></i> Download CV</a>
-        <a href="#contact" class="btn secondary-btn"><i class="fas fa-envelope"></i> Contact Me</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <div class="section-header">
-      <h2><i class="fas fa-user-shield"></i> About Me</h2>
-      <div class="header-line"></div>
-    </div>
-    <div class="about-details">
-      <p>
-        As a passionate and driven Cyber Security Intern, I am dedicated to safeguarding digital assets and contributing
-        to a
-        safer online world. I have completed my graduation in B.Tech in Computer Science and Engineering, which has
-        provided me
-        with a strong foundation in computer systems, programming, and network technologies.</p>
-
-      <p> My journey in cybersecurity began with a deep curiosity for how technology works and a commitment to
-        understanding the
-        threats facing modern organizations. This interest has led me to pursue hands-on experience through internships,
-        academic projects, and personal initiatives.</p>
-
-      <p>I have gained practical experience with key cybersecurity tools and concepts, including intrusion detection
-        systems,
-        vulnerability assessments, and security information and event management (SIEM) platforms. My technical skills
-        span
-        across network security, ethical hacking, incident response, and scripting with Python. I have also participated
-        in Capture the Flag (CTF) challenges and contributed to open-source security projects, which have strengthened
-        my
-        problem-solving abilities and teamwork skills.</p>
-
-      <p>My portfolio highlights a variety of projects, such as conducting security audits, analyzing network traffic
-        with
-        Wireshark, and automating security tasks using Python. I am continuously expanding my knowledge by working
-        towards
-        industry-recognized certifications and staying engaged with the latest trends and threats in cybersecurity.</p>
-
-      <p>What motivates me most is the challenge of solving complex security issues and the opportunity to make a
-        tangible impact
-        in protecting digital infrastructure. I am eager to collaborate with professionals in the field, learn from
-        real-world
-        scenarios, and contribute my skills to innovative security solutions.</p>
-
-      <p> Thank you for visiting my portfolio. I look forward to connecting and exploring opportunities to grow in the
-        dynamic
-        world of cybersecurity.</p>
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-greeting">Hello, I'm</div>
+      <h1 class="hero-name">Amod Yadav</h1>
+      <div class="hero-role" id="typewriter-text"></div>
+      <p class="hero-description">
+        A passionate Cyber Security Intern dedicated to safeguarding digital assets.
+        With expertise in network security, ethical hacking, and automation, I create
+        innovative solutions for modern cybersecurity challenges.
       </p>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <div class="section-header">
-      <h2><i class="fas fa-code"></i> Technical Skills</h2>
-      <div class="header-line"></div>
-    </div>
-    <div class="skills-container">
-      <div class="skills-category skill-animate">
-        <h3><i class="fas fa-shield-alt"></i> Cybersecurity</h3>
-        <div class="skill-pills">
-          <div class="skill-pill">Threat Detection & Response</div>
-          <div class="skill-pill">Penetration Testing</div>
-          <div class="skill-pill">Ethical Hacking</div>
-          <div class="skill-pill">Network Security</div>
-          <div class="skill-pill">Cloud Security</div>
-          <div class="skill-pill">Cryptography</div>
-        </div>
+      <div class="hero-buttons">
+        <a href="#projects" class="btn-primary">SEE MY WORK</a>
+        <a href="resume.pdf" download class="btn-secondary">Download CV</a>
       </div>
-      <div class="skills-category skill-animate">
-        <h3><i class="fas fa-laptop-code"></i> Development</h3>
-        <div class="skill-pills">
-          <div class="skill-pill">Python</div>
-          <div class="skill-pill">Java</div>
-          <div class="skill-pill">JavaScript</div>
-          <div class="skill-pill">Flask</div>
-          <div class="skill-pill">Djanjo</div>
-          <div class="skill-pill">MySql</div>
-        </div>
-      </div>
-      <div class="skills-category skill-animate">
-        <h3><i class="fas fa-brain"></i> Professional</h3>
-        <div class="skill-pills">
-          <div class="skill-pill">Problem-Solving</div>
-          <div class="skill-pill">Critical Thinking</div>
-          <div class="skill-pill">Collaboration</div>
-          <div class="skill-pill">Adaptability</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <div class="section-header">
-      <h2><i class="fas fa-briefcase"></i> Experience</h2>
-      <div class="header-line"></div>
-    </div>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Feb-May 2025</div>
-        <div class="timeline-content">
-          <h3>Cyber Security Intern</h3>
-          <h4>KnackTech E-Learning Pvt.Ltd</h4>
-          <p>Working on advanced threat detection and protection to safeguard digital assets and information systems.
-          </p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">Oct-Nov 2024</div>
-        <div class="timeline-content">
-          <h3>Cyber Security and Ethical Hacking Intern</h3>
-          <h4>Vaultcode</h4>
-          <p>Worked on basic to advanced ethical hacking practical hands-on projects.</p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-date">2022-2023</div>
-        <div class="timeline-content">
-          <h3>Full Stack Developer</h3>
-          <h4>TekkyBench</h4>
-          <p>Built responsive and interactive user interfaces using HTML, CSS, and JavaScript to enhance user experience
-            and design.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="section-header">
-      <h2>Cyber Security Projects</h2>
-      <div class="header-line"></div>
-    </div>
-    <div class="projects-grid">
-      <!-- SecureLoginMFA -->
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-user-lock"></i></div>
-        <h3>SecureLoginMFA</h3>
-        <p>Multi-factor authentication system enhancing login security using OTP and email verification.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Flask</span>
-          <span class="tech-tag">MFA</span>
-        </div>
-        <a class="github-link" href="https://github.com/YadavAmod/SecureLoginMFA" target="_blank"><i
-            class="fab fa-github"></i>View on GitHub</a>
-      </div>
-      <!-- RealTimeThreatDetection -->
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-bug"></i></div>
-        <h3>RealTime Threat Detection</h3>
-        <p>Real-time intrusion and malware detection using machine learning for proactive cyber defense.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">ML</span>
-          <span class="tech-tag">Cybersecurity</span>
-        </div>
-        <a class="github-link" href="https://github.com/YadavAmod/RealTimeThreatDetection" target="_blank"><i
-            class="fab fa-github"></i>View on GitHub</a>
-      </div>
-      <!-- AutomatedMalwareDetection -->
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
-        <h3>Automated Malware Detection</h3>
-        <p>Automated system for detecting malware in files using static and dynamic analysis techniques.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Malware Analysis</span>
-        </div>
-        <a class="github-link" href="https://github.com/YadavAmod/AutomatedMalwareDetection" target="_blank"><i
-            class="fab fa-github"></i>View on GitHub</a>
-      </div>
-      <!-- SmartSentry-Cyber-Threat-Intelligence-in-IIoT -->
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-network-wired"></i></div>
-        <h3>SmartSentry: Cyber Threat Intelligence in IIoT</h3>
-        <p>Threat intelligence platform for Industrial IoT, providing real-time monitoring and anomaly detection.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">IIoT</span>
-          <span class="tech-tag">Threat Intelligence</span>
-        </div>
-        <a class="github-link" href="https://github.com/YadavAmod/SmartSentry-Cyber-Threat-Intelligence-in-IIoT"
-          target="_blank"><i class="fab fa-github"></i>View on GitHub</a>
-      </div>
-      <!-- Network-Vulnerability-Assessment -->
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-search"></i></div>
-        <h3>Network Vulnerability Assessment</h3>
-        <p>Toolkit for scanning and reporting vulnerabilities in networked systems and devices.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Networking</span>
-          <span class="tech-tag">Security</span>
-        </div>
-        <a class="github-link" href="https://github.com/YadavAmod/Network-Vulnerability-Assessment" target="_blank"><i
-            class="fab fa-github"></i>View on GitHub</a>
-      </div>
-      <!-- chatbot -->
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-robot"></i></div>
-        <h3>Cybersecurity Chatbot</h3>
-        <p>Conversational chatbot to assist users with cybersecurity queries and best practices.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">NLP</span>
-          <span class="tech-tag">Chatbot</span>
-        </div>
-        <a class="github-link" href="https://github.com/YadavAmod/chatbot" target="_blank"><i
-            class="fab fa-github"></i>View on GitHub</a>
-      </div>
-      <!-- password-strength-checker-generator -->
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-key"></i></div>
-        <h3>Password Strength Checker & Generator</h3>
-        <p>Tool for evaluating password strength and generating secure passwords to enhance user security.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Security</span>
-        </div>
-        <a class="github-link" href="https://github.com/YadavAmod/password-strength-checker-generator"
-          target="_blank"><i class="fab fa-github"></i>View on GitHub</a>
-      </div>
-      <!-- Web-Application-Firewall-WAF-using-Flask -->
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-fire"></i></div>
-        <h3>Web Application Firewall (WAF)</h3>
-        <p>Custom WAF built with Flask to detect and block common web attacks like SQLi and XSS.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Flask</span>
-          <span class="tech-tag">WAF</span>
-        </div>
-        <a class="github-link" href="https://github.com/YadavAmod/Web-Application-Firewall-WAF-using-Flask"
-          target="_blank"><i class="fab fa-github"></i>View on GitHub</a>
-      </div>
-      <!-- Caesar-Cipher-encryption-and-decryption-tool -->
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-lock"></i></div>
-        <h3>Caesar Cipher Encryption/Decryption Tool</h3>
-        <p>Simple tool for encrypting and decrypting text using the Caesar cipher algorithm.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Cryptography</span>
-        </div>
-        <a class="github-link" href="https://github.com/YadavAmod/Caesar-Cipher-encryption-and-decryption-tool"
-          target="_blank"><i class="fab fa-github"></i>View on GitHub</a>
-      </div>
-      <!-- phishing-detector -->
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-fish"></i></div>
-        <h3>Phishing Detector</h3>
-        <p>Machine learning–powered tool to detect phishing URLs and protect users from scams.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">ML</span>
-          <span class="tech-tag">Phishing</span>
-        </div>
-        <a class="github-link" href="https://github.com/YadavAmod/phishing-detector" target="_blank"><i
-            class="fab fa-github"></i>View on GitHub</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Certifications Section -->
-  <section id="certifications">
-    <div class="section-header">
-      <h2>Certifications</h2>
-      <div class="header-line"></div>
-    </div>
-    <div class="projects-grid">
-      <!-- Great Learning -->
-      <div class="project-card">
-        <div class="project-icon">
-          <img src="https://assets-v2.greatlearning.com/assets/favicon-32x32.png" alt="Great Learning"
-            style="width:2.2rem; height:2.2rem; border-radius:6px;">
-        </div>
-        <h3>Technical Foundation</h3>
-        <div class="tech-tags">
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">Cybersecurity</span>
-          <span class="tech-tag">Development</span>
-        </div>
-        <a class="github-link" href="https://www.greatlearning.in/academy" target="_blank">
-          <i class="fas fa-external-link-alt"></i>View Certificate
+      <div class="hero-socials">
+        <a href="https://github.com/amodyadav" target="_blank" class="social-link">
+          <i class="fab fa-github"></i>
         </a>
-      </div>
-      <!-- DataFlair -->
-      <div class="project-card">
-        <div class="project-icon">
-          <img src="https://data-flair.training/blogs/wp-content/uploads/sites/2/2019/07/dataflair-logo.png"
-            alt="DataFlair" style="width:2.2rem; height:2.2rem; border-radius:6px;">
-        </div>
-        <h3>Programming</h3>
-        <div class="tech-tags">
-          <span class="tech-tag">Java</span>
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">JavaScript</span>
-        </div>
-        <a class="github-link" href="https://data-flair.training/certificates" target="_blank">
-          <i class="fas fa-external-link-alt"></i>View Certificate
+        <a href="https://www.linkedin.com/in/amodyadav01/" target="_blank" class="social-link">
+          <i class="fab fa-linkedin"></i>
         </a>
-      </div>
-      <!-- EC-Council -->
-      <div class="project-card">
-        <div class="project-icon">
-          <img src="https://aspen.eccouncil.org/Content/Images/favicon.ico" alt="EC-Council"
-            style="width:2.2rem; height:2.2rem; border-radius:6px;">
-        </div>
-        <h3>Certification Courses</h3>
-        <div class="tech-tags">
-          <span class="tech-tag">Ethical Hacking</span>
-          <span class="tech-tag">Penetration Testing</span>
-          <span class="tech-tag">Cloud Foundation</span>
-        </div>
-        <a class="github-link" href="https://aspen.eccouncil.org" target="_blank">
-          <i class="fas fa-external-link-alt"></i>View Certificate
-        </a>
-      </div>
-      <!-- LearnVern -->
-      <div class="project-card">
-        <div class="project-icon">
-          <img src="https://www.learnvern.com/images/favicon.ico" alt="LearnVern"
-            style="width:2.2rem; height:2.2rem; border-radius:6px;">
-        </div>
-        <h3>Cyber Security Essentials</h3>
-        <div class="tech-tags">
-          <span class="tech-tag">Network Security</span>
-          <span class="tech-tag">contact-container</span>
-          <span class="tech-tag">Ethical Hacking</span>
-
-        </div>
-        <a class="github-link" href="https://www.learnvern.com/certificates" target="_blank">
-          <i class="fas fa-external-link-alt"></i>View Certificate
+        <a href="mailto:amodyadav091998@gmail.com" class="social-link">
+          <i class="fa fa-envelope"></i>
         </a>
       </div>
     </div>
-  </section>
+    <div class="hero-right">
+      <img src="dp1.jpg" alt="Amod Yadav" class="hero-image" />
+    </div>
+  </div>
+</section>
 
+<!-- ========== ABOUT SECTION ========== -->
+<section id="about" class="about-section">
+  <div class="container about-container">
+
+    <h2>About Me</h2>
+    <p> I am an enthusiastic and detail-oriented <strong>Cyber Security Intern</strong> with a strong commitment to
+      protecting digital landscapes. Having earned my B.Tech in Computer Science and Engineering, I have developed a
+      solid
+      foundation in information security principles and best practices. My academic journey has fueled my curiosity
+      for
+      understanding how cyber threats evolve and how to counter them with innovative solutions. </p>
+    <p> Throughout my internship, I have gained practical experience in areas such as network security, ethical
+      hacking, and
+      incident response. I am particularly skilled in using SIEM tools for monitoring and analyzing security events,
+      as well
+      as leveraging Python to automate repetitive security tasks. My hands-on work has included conducting
+      vulnerability
+      assessments, penetration testing, and assisting in the development of security policies. </p>
+    <p> I thrive in collaborative environments where I can contribute to real-world projects that make a tangible
+      impact.
+      Whether it's identifying potential threats, mitigating risks, or building automation scripts to streamline
+      security
+      operations, I approach each challenge with analytical thinking and a problem-solving mindset. My passion for
+      cybersecurity drives me to stay updated with the latest trends and continuously expand my technical skill set.
+    </p>
+    <p> Beyond technical expertise, I value clear communication and teamwork. I enjoy translating complex security
+      concepts
+      into actionable insights for both technical and non-technical audiences. My goal is to not only enhance my own
+      capabilities but also to help organizations strengthen their security posture in an ever-changing digital world.
+    </p>
+    <p> As I continue to grow in the cybersecurity field, I am eager to take on new challenges, learn from industry
+      professionals, and contribute to building safer digital environments. I am excited about the future of
+      cybersecurity
+      and my role in shaping it. </p>
+
+  </div>
+</section>
+
+<!-- 📚 Education Section -->
+
+<section id="education">
+  <div class="section-header">
+    <h2>Education</h2>
+    <div class="header-line"></div>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Primary</h3>
+      <h4>Shree Primary School</h4>
+      <p>Completed primary level of education.</p>
+    </div>
+    <div class="card">
+      <h3>Secondary</h3>
+      <h4>Shree Saraswati Secondary School</h4>
+      <p>Completed 6-10 classes of study with distinction.</p>
+    </div>
+    <div class="card">
+      <h3>11th & 12th</h3>
+      <h4>Kantipur Secondary School</h4>
+      <p>Completed 11 & 12 in science stream with computer science with distinction.</p>
+    </div>
+    <div class="card">
+      <h3>Bachelor</h3>
+      <h4>Bangalore Technological Institute,VTU University</h4>
+      <p>Completed graduation with CGPA:9.2</p>
+    </div>
+    <div class="card">
+      <h3>Master</h3>
+      <h4>Not Fixed</h4>
+      <p>On future planning</p>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills">
+  <div class="section-header">
+    <h2><i class="fas fa-code"></i> Technical Skills</h2>
+    <div class="header-line"></div>
+  </div>
+  <div class="skills-container">
+    <div class="skills-category skill-animate">
+      <h3><i class="fas fa-shield-alt"></i> Cybersecurity</h3>
+      <div class="skill-pills">
+        <div class="skill-pill">Threat Detection & Response</div>
+        <div class="skill-pill">Penetration Testing</div>
+        <div class="skill-pill">Ethical Hacking</div>
+        <div class="skill-pill">Network Security</div>
+        <div class="skill-pill">Cloud Security</div>
+        <div class="skill-pill">CCNA</div>
+        <div class="skill-pill">Computer Network</div>
+        <div class="skill-pill">Cryptography</div>
+        <div class="skill-pill">Kali Linux</div>
+      </div>
+    </div>
+    <div class="skills-category skill-animate">
+      <h3><i class="fas fa-laptop-code"></i> Development</h3>
+      <div class="skill-pills">
+        <div class="skill-pill">Python</div>
+        <div class="skill-pill">Java</div>
+        <div class="skill-pill">HTML</div>
+        <div class="skill-pill">CSS</div>
+        <div class="skill-pill">JavaScript</div>
+        <div class="skill-pill">Flask</div>
+        <div class="skill-pill">Djanjo</div>
+        <div class="skill-pill">MySql</div>
+      </div>
+    </div>
+    <div class="skills-category skill-animate">
+      <h3><i class="fas fa-brain"></i> Professional</h3>
+      <div class="skill-pills">
+        <div class="skill-pill">Problem-Solving</div>
+        <div class="skill-pill">Critical Thinking</div>
+        <div class="skill-pill">Collaboration</div>
+        <div class="skill-pill">Adaptability</div>
+        <div class="skill-pill">Leadership</div>
+        <div class="skill-pill">Quick Learner</div>
+        <div class="skill-pill">Communication</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= Experience Section ======= -->
+<section id="experience">
+  <div class="section-header">
+    <h2>Experience</h2>
+    <div class="header-line"></div>
+  </div>
+  <div class="card-grid">
+
+    <div class="card">
+      <h3>Full Stack Developer Intern</h3>
+      <h4>Tekkybench Innovation</h4>
+      <span class="timeline-date">2023</span>
+      <ul>
+        <li>Developed and maintained scalable full-stack applications with modern web technologies.</li>
+        <li>Implemented secure authentication and role-based access control across user interfaces.</li>
+        <li>Collaborated with cross-functional teams to enhance system security and performance.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Cyber Security and Ethical Hacking Intern</h3>
+      <h4>Vaultcode Pvt. Ltd</h4>
+      <span class="timeline-date">2024</span>
+      <ul>
+        <li>Performed penetration testing and vulnerability assessments on live environments.</li>
+        <li>Analyzed potential threats and proposed mitigation strategies for enterprise networks.</li>
+        <li>Documented findings and prepared detailed security audit reports.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Cyber Security Intern</h3>
+      <h4>Knacktech eLearning Pvt. Ltd</h4>
+      <span class="timeline-date">2025</span>
+      <ul>
+        <li>Monitored and analyzed suspicious activity using SIEM tools and network analyzers.</li>
+        <li>Supported incident response efforts and real-time threat mitigation.</li>
+        <li>Contributed to improving organizational cybersecurity awareness and hygiene.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Data Analytics with Python – Training</h3>
+      <h4>Anudip Foundation</h4>
+      <span class="timeline-date">2024 – 2025</span>
+      <ul>
+        <li>Learned data wrangling, visualization, and analysis techniques using Python libraries like Pandas and
+          Matplotlib.</li>
+        <li>Applied data-driven approaches to identify trends and support decision-making processes.</li>
+        <li>Built interactive dashboards and reports focusing on performance and user accessibility.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <div class="section-header">
+    <h2>Cyber Security Projects</h2>
+    <div class="header-line"></div>
+  </div>
+  <div class="projects-grid">
+    <!-- SecureLoginMFA -->
+    <div class="project-card">
+      <div class="project-icon"><i class="fas fa-user-lock"></i></div>
+      <h3>SecureLoginMFA</h3>
+      <p>Multi-factor authentication system enhancing login security using OTP and email verification.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Flask</span>
+        <span class="tech-tag">MFA</span>
+      </div>
+      <a class="github-link" href="https://github.com/YadavAmod/SecureLoginMFA" target="_blank"><i
+          class="fab fa-github"></i>View on GitHub</a>
+    </div>
+    <!-- RealTimeThreatDetection -->
+    <div class="project-card">
+      <div class="project-icon"><i class="fas fa-bug"></i></div>
+      <h3>RealTime Threat Detection</h3>
+      <p>Real-time intrusion and malware detection using machine learning for proactive cyber defense.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">ML</span>
+        <span class="tech-tag">Cybersecurity</span>
+      </div>
+      <a class="github-link" href="https://github.com/YadavAmod/RealTimeThreatDetection" target="_blank"><i
+          class="fab fa-github"></i>View on GitHub</a>
+    </div>
+    <!-- AutomatedMalwareDetection -->
+    <div class="project-card">
+      <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+      <h3>Automated Malware Detection</h3>
+      <p>Automated system for detecting malware in files using static and dynamic analysis techniques.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Malware Analysis</span>
+      </div>
+      <a class="github-link" href="https://github.com/YadavAmod/AutomatedMalwareDetection" target="_blank"><i
+          class="fab fa-github"></i>View on GitHub</a>
+    </div>
+    <!-- SmartSentry-Cyber-Threat-Intelligence-in-IIoT -->
+    <div class="project-card">
+      <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+      <h3>SmartSentry: Cyber Threat Intelligence in IIoT</h3>
+      <p>Threat intelligence platform for Industrial IoT, providing real-time monitoring and anomaly detection.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">IIoT</span>
+        <span class="tech-tag">Threat Intelligence</span>
+      </div>
+      <a class="github-link" href="https://github.com/YadavAmod/SmartSentry-Cyber-Threat-Intelligence-in-IIoT"
+        target="_blank"><i class="fab fa-github"></i>View on GitHub</a>
+    </div>
+    <!-- Network-Vulnerability-Assessment -->
+    <div class="project-card">
+      <div class="project-icon"><i class="fas fa-search"></i></div>
+      <h3>Network Vulnerability Assessment</h3>
+      <p>Toolkit for scanning and reporting vulnerabilities in networked systems and devices.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Networking</span>
+        <span class="tech-tag">Security</span>
+      </div>
+      <a class="github-link" href="https://github.com/YadavAmod/Network-Vulnerability-Assessment" target="_blank"><i
+          class="fab fa-github"></i>View on GitHub</a>
+    </div>
+    <!-- chatbot -->
+    <div class="project-card">
+      <div class="project-icon"><i class="fas fa-robot"></i></div>
+      <h3>Cybersecurity Chatbot</h3>
+      <p>Conversational chatbot to assist users with cybersecurity queries and best practices.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">NLP</span>
+        <span class="tech-tag">Chatbot</span>
+      </div>
+      <a class="github-link" href="https://github.com/YadavAmod/chatbot" target="_blank"><i
+          class="fab fa-github"></i>View on GitHub</a>
+    </div>
+    <!-- password-strength-checker-generator -->
+    <div class="project-card">
+      <div class="project-icon"><i class="fas fa-key"></i></div>
+      <h3>Password Strength Checker & Generator</h3>
+      <p>Tool for evaluating password strength and generating secure passwords to enhance user security.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Security</span>
+      </div>
+      <a class="github-link" href="https://github.com/YadavAmod/password-strength-checker-generator" target="_blank"><i
+          class="fab fa-github"></i>View on GitHub</a>
+    </div>
+    <!-- Web-Application-Firewall-WAF-using-Flask -->
+    <div class="project-card">
+      <div class="project-icon"><i class="fas fa-fire"></i></div>
+      <h3>Web Application Firewall (WAF)</h3>
+      <p>Custom WAF built with Flask to detect and block common web attacks like SQLi and XSS.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Flask</span>
+        <span class="tech-tag">WAF</span>
+      </div>
+      <a class="github-link" href="https://github.com/YadavAmod/Web-Application-Firewall-WAF-using-Flask"
+        target="_blank"><i class="fab fa-github"></i>View on GitHub</a>
+    </div>
+    <!-- Caesar-Cipher-encryption-and-decryption-tool -->
+    <div class="project-card">
+      <div class="project-icon"><i class="fas fa-lock"></i></div>
+      <h3>Caesar Cipher Encryption/Decryption Tool</h3>
+      <p>Simple tool for encrypting and decrypting text using the Caesar cipher algorithm.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Cryptography</span>
+      </div>
+      <a class="github-link" href="https://github.com/YadavAmod/Caesar-Cipher-encryption-and-decryption-tool"
+        target="_blank"><i class="fab fa-github"></i>View on GitHub</a>
+    </div>
+    <!-- phishing-detector -->
+    <div class="project-card">
+      <div class="project-icon"><i class="fas fa-fish"></i></div>
+      <h3>Phishing Detector</h3>
+      <p>Machine learning–powered tool to detect phishing URLs and protect users from scams.</p>
+      <div class="tech-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">ML</span>
+        <span class="tech-tag">Phishing</span>
+      </div>
+      <a class="github-link" href="https://github.com/YadavAmod/phishing-detector" target="_blank"><i
+          class="fab fa-github"></i>View on GitHub</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Certifications Section -->
+<section id="certifications">
+  <div class="section-header">
+    <h2>Certifications</h2>
+    <div class="header-line"></div>
+  </div>
+  <div class="projects-grid">
+    <!-- Great Learning -->
+    <div class="project-card">
+      <div class="project-icon">
+        <img src="greatL.pdf" alt="Great Learning" style="width:2.2rem; height:2.2rem; border-radius:6px;">
+      </div>
+      <h3>Technical Foundation</h3>
+      <div class="tech-tags">
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">Cybersecurity</span>
+        <span class="tech-tag">Development</span>
+      </div>
+      <a class="github-link" href="https://olympus.mygreatlearning.com/certificates?pb_id=581" target="_blank">
+        <i class="fas fa-external-link-alt"></i>View Certificate
+      </a>
+    </div>
+    <!-- DataFlair -->
+    <div class="project-card">
+      <div class="project-icon">
+        <img src="#" alt="DataFlair.com" style="width:2.2rem; height:2.2rem; border-radius:6px;">
+      </div>
+      <h3>Programming</h3>
+      <div class="tech-tags">
+        <span class="tech-tag">Java</span>
+        <span class="tech-tag">Python</span>
+        <span class="tech-tag">JavaScript</span>
+      </div>
+      <a class="github-link" href="https://data-flair.training/verify/7CB7615ABA-7C87C194F8-734F4A18F5/"
+        target="_blank">
+        <i class="fas fa-external-link-alt"></i>View Certificate
+      </a>
+    </div>
+    <!-- EC-Council -->
+    <div class="project-card">
+      <div class="project-icon">
+        <img src="#" alt="EC-Council" style="width:2.2rem; height:2.2rem; border-radius:6px;">
+      </div>
+      <h3>Certification Courses</h3>
+      <div class="tech-tags">
+        <span class="tech-tag">Ethical Hacking</span>
+        <span class="tech-tag">Penetration Testing</span>
+        <span class="tech-tag">Cloud Foundation</span>
+      </div>
+      <a class="github-link"
+        href="https://codered.eccouncil.org/certificate/07cb3901-167d-4683-b0ea-af1345f025f5?logged=true"
+        target="_blank">
+        <i class="fas fa-external-link-alt"></i>View Certificate
+      </a>
+    </div>
+    <!-- LearnVern -->
+    <div class="project-card">
+      <div class="project-icon">
+        <img src="https://www.learnvern.com/images/favicon.ico" alt="Learnvern.com"
+          style="width:2.2rem; height:2.2rem; border-radius:6px;">
+      </div>
+      <h3>Cyber Security Essentials</h3>
+      <div class="tech-tags">
+        <span class="tech-tag">Network Security</span>
+        <span class="tech-tag">contact-container</span>
+        <span class="tech-tag">Ethical Hacking</span>
+
+      </div>
+      <a class="github-link" href="https://www.learnvern.com/my-courses" target="_blank">
+        <i class="fas fa-external-link-alt"></i>View Certificate
+      </a>
+    </div>
+  </div>
 
   <!-- Contact Section -->
   <section id="contact">
     <div class="section-header">
-      <h2><i class="fas fa-envelope"></i> Contact Me</h2>
+      <h2>Contact</h2>
       <div class="header-line"></div>
     </div>
-    <div class="contact-container">
-      <div class="contact-info">
-        <div class="contact-item">
-          <div class="contact-icon"><i class="fas fa-phone"></i></div>
-          <div>
-            <h3>Phone</h3>
-            <p>+91 7070953996</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-          <div>
-            <h3>Email</h3>
-            <p>amodyadav091998@gmail.com</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-          <div>
-            <h3>Location</h3>
-            <p>Bangalore Urban - 560035</p>
-          </div>
+    <section id="contact" class="contact-section contact-flex">
+      <div class="contact-details-side">
+        <h2>Contact Details</h2>
+        <div class="contact-details">
+          <span><i class="fa fa-phone"></i> +91 7070953996</span>
+          <span><i class="fa fa-envelope"></i> amodyadav091998@gmail.com</span>
+          <span><i class="fa fa-map-marker"></i> Bangalore Urban - 560035</span>
         </div>
       </div>
-      <form id="contact-form">
-        <div class="form-group">
+      <div class="contact-form-side">
+        <h2>Message Me</h2>
+        <form id="contact-form">
           <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your Name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="Your Email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="btn submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
-      </form>
-    </div>
-  </section>
+          <input type="text" id="name" name="name" required />
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-logo"><span class="blink">_</span></div>
-      <p>© 2025 Amod Yadav | Cybersecurity Professional</p>
-      <div class="social-icons">
-        <a href="https://github.com/YadavAmod" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/amodyadav010/" class="social-icon"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100055071707259" class="social-icon"><i
-            class="fab fa-facebook"></i></a>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
       </div>
-    </div>
-  </footer>
-  <script src="scripts.js"></script>
-</body>
+    </section>
+    <!--footer starts from here-->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4>About</h4>
+          <ul>
+            <li>Cyber Security Enthusiast</li>
+            <li>B.Tech CSE Graduate</li>
+            <li>Passionate Learner</li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <div class="footer-socials">
+            <a href="https://github.com/amodyadav" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/amodyadav" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:amodyadav091998@gmail.com"><i class="fa fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2025 Amod Yadav. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    </body>
 
 </html>

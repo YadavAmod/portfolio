@@ -1,85 +1,94 @@
-// Preloader
-window.addEventListener('load', () => {
-  setTimeout(() => {
-      document.getElementById('preloader').style.display = 'none';
-  }, 900);
-});
-
-// Theme Toggle
-const themeToggle = document.getElementById('theme-toggle');
-themeToggle.addEventListener('click', () => {
+// Theme toggle
+const themeButton = document.getElementById('theme-button');
+themeButton.addEventListener('click', () => {
   document.body.classList.toggle('light');
+  themeButton.classList.toggle('fa-moon');
+  themeButton.classList.toggle('fa-sun');
 });
 
-// Responsive Nav
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('nav');
-menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('active');
-});
+// Navbar mobile toggle
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+const navClose = document.getElementById('nav-close');
+
+navToggle?.addEventListener('click', () => navMenu.classList.add('active'));
+navClose?.addEventListener('click', () => navMenu.classList.remove('active'));
+
+document.querySelectorAll('.nav__link').forEach(n =>
+  n.addEventListener('click', () => navMenu.classList.remove('active'))
+);
 
 // Typewriter Effect
 const roles = [
   "Cyber Security Intern",
   "Ethical Hacker",
-  "Full Stack Developer",
+  "Penetration Tester",
   "Network Security Enthusiast"
 ];
 let typeIndex = 0, charIndex = 0, isDeleting = false;
 const typewriterText = document.getElementById('typewriter-text');
+
 function typeWriter() {
-  let current = roles[typeIndex];
+  const current = roles[typeIndex];
   if (isDeleting) {
-      typewriterText.textContent = current.substring(0, charIndex--);
-      if (charIndex < 0) {
-          isDeleting = false;
-          typeIndex = (typeIndex + 1) % roles.length;
-          setTimeout(typeWriter, 800);
-      } else {
-          setTimeout(typeWriter, 40);
-      }
+    typewriterText.textContent = current.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      typeIndex = (typeIndex + 1) % roles.length;
+      setTimeout(typeWriter, 500);
+    } else setTimeout(typeWriter, 40);
   } else {
-      typewriterText.textContent = current.substring(0, charIndex++);
-      if (charIndex > current.length) {
-          isDeleting = true;
-          setTimeout(typeWriter, 1200);
-      } else {
-          setTimeout(typeWriter, 80);
-      }
+    typewriterText.textContent = current.substring(0, charIndex++);
+    if (charIndex > current.length) {
+      isDeleting = true;
+      setTimeout(typeWriter, 1000);
+    } else setTimeout(typeWriter, 80);
   }
 }
-typeWriter();
+if (typewriterText) typeWriter();
 
 // Animated Name
 const animatedName = document.getElementById('animated-name');
-let nameText = "AMOD YADAV";
-let nameIdx = 0;
-function animateName() {
-  if (nameIdx <= nameText.length) {
-      animatedName.textContent = nameText.substring(0, nameIdx);
-      nameIdx++;
-      setTimeout(animateName, 80);
+if (animatedName) {
+  let nameText = "AMOD YADAV";
+  let nameIdx = 0;
+  function animateName() {
+    if (nameIdx <= nameText.length) {
+      animatedName.textContent = nameText.substring(0, nameIdx++);
+      setTimeout(animateName, 100);
+    }
+  }
+  animateName();
+}
+const typewriterText = document.getElementById('typewriter-text');
+const roles = [
+  "Cyber Security Intern",
+  "Ethical Hacker",
+  "Penetration Tester",
+  "Network Security Enthusiast"
+];
+let typeIndex = 0, charIndex = 0, isDeleting = false;
+
+function typeWriter() {
+  const current = roles[typeIndex];
+  if (isDeleting) {
+    typewriterText.textContent = current.substring(0, charIndex--);
+    if (charIndex < 0) {
+      isDeleting = false;
+      typeIndex = (typeIndex + 1) % roles.length;
+      setTimeout(typeWriter, 400);
+    } else {
+      setTimeout(typeWriter, 50);
+    }
+  } else {
+    typewriterText.textContent = current.substring(0, charIndex++);
+    if (charIndex > current.length) {
+      isDeleting = true;
+      setTimeout(typeWriter, 1500);
+    } else {
+      setTimeout(typeWriter, 100);
+    }
   }
 }
-animateName();
 
-// Contact Form (Demo only)
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Thank you for reaching out! I will get back to you soon.');
-  this.reset();
-});
-
-// Scroll Reveal Animation
-const revealElements = document.querySelectorAll('section, .project-card, .cert-modern');
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
-  revealElements.forEach(el => {
-      const revealTop = el.getBoundingClientRect().top;
-      if (revealTop < windowHeight - 100) {
-          el.classList.add('visible');
-      }
-  });
-}
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+if (typewriterText) typeWriter();
